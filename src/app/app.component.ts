@@ -18,7 +18,15 @@ export class AppComponent {
     this.initializeApp();
   }
 
+  // pages: {url:string; direction: string; icon:string; text: string}[];
+  
+
   initializeApp() {
+    
+    // this.pages= [
+    //   { url: 'app/tabs/tab1', direction:'back', icon:'home', text:'info'},
+    //   { url: 'app/tabs/tab2', direction:'forward', icon:'add', text:'situação'}
+    // ];
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();

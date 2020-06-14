@@ -1,0 +1,28 @@
+// #fundo{
+//     background: url("../../../assets/img/fundo.jpg");
+//     background-attachment: fixed;
+   
+// }
+
+ion-content.background{
+   --background: url(../../../assets/img/fundo-azul.jpg) 0 0/100% 100% repeat;
+}
+ion-item{
+    margin-bottom: 30px;
+}
+.efeito{
+    --background:transparent;
+    
+}
+
+.inicio{
+    left: 0;
+    right: 0;
+    margin-top: 120px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+img{
+    width: 80%;
+}

@@ -1,0 +1,54 @@
+
+// ion-content.background{
+//   --background: #3880ff;
+// }
+  .card{
+   border: solid 1px #0077DD;
+   background-color:#fff;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px  #0077DD;
+  margin:5px;
+  margin-top: 10px;
+  text-align: center;
+ 
+  }
+
+  .borda{
+    height: 93%;
+    border-radius:  15px;
+    margin-top: 12px;
+    background-color:#fff;
+    //  padding: 5px 0px;
+    box-shadow: 1px 1px 5px #000;
+  }
+a{
+   text-decoration: none;
+   color: #000;
+}
+
+h4{
+  font: Trebuchet ;
+}
+
+@font-face{
+
+  font-family: "personalizada";
+  src: url("/assets/font/YellowRabbit-PersonalUse.woff");
+
+}
+
+h1{
+  font-family:"personalizada";
+  font-size:35px;
+}
+
+  ion-img{
+    
+     margin: 0 auto;
+     margin-top: 10px;
+   width: 60%;
+   border-radius: 50%;
+   
+  }
+
+ 

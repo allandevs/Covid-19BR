@@ -1,0 +1,57 @@
+
+
+
+<ion-content class="ion-padding" class="background" >
+  <h1 class="ion-text-center"><img src="assets/img/covid-logo.png"></h1>
+
+      <div class="inicio">
+    <form>
+      <ion-item class="efeito">
+        <ion-icon name="mail-outline" color="dark" slot="start"></ion-icon>
+        <ion-input placeholder="E-mail" name="login" type="text" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item class="efeito">
+        <ion-icon name="lock-closed-outline" color="dark" slot="start"></ion-icon>
+        <ion-input placeholder="Password" name="senha" type="password" [(ngModel)]="senha"></ion-input>
+      </ion-item>
+          <ion-button class="btn-margin" size="large" shape="round" color="light" type="submit" (click)="insereUser()" expand="block">Criar Conta</ion-button>
+    </form>
+    
+    <ion-button class="btn-margin" (click)= "voltar()"color="light" fill="clear" expand="block" >Ja tenho conta</ion-button>
+  </div>
+
+  </ion-content>
+
+
+   
+
+    
+<!-- 
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="voltar()" class="show-back-button" ></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  
+    <h1>  <ion-icon name=""></ion-icon>Aqui sua Logo Marca </h1>
+<form>
+  <ion-item lines="full">
+    <ion-label position="floating" >E-mail</ion-label> 
+    <ion-input name="login" type="text" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item lines="full">
+    <ion-label position="floating" >Senha</ion-label>
+    <ion-input name="senha" type="password" [(ngModel)]="senha"></ion-input>
+  </ion-item>
+  <ion-row>
+    <ion-col>
+      <ion-button color="secondary" type="submit" (click)="insereUsuario()" expand="full"> Cadastrar</ion-button>
+    </ion-col>
+  </ion-row>
+</form>
+
+</ion-content> -->

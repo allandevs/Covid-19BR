@@ -1,0 +1,38 @@
+
+
+
+ion-card{
+    border-radius: 20px;
+    background-color:#FAFAFA;
+    box-shadow: 1px 1px 4px #0077DD;
+
+   
+  }
+
+  ion-card.azul{
+    background-color: #3880ff;
+  }
+  
+  ion-card-header{
+    background-color:#FAFAFA;
+    
+  }
+  ion-searchbar{
+    --border-radius: 10px;
+    --box-shadow:1px 1px 4px #000;
+    --placeholder-color: #000;
+    --color:  #0077DD;
+    
+    
+  }
+
+  .espaco{
+    margin-top:20px;
+  }
+  
+  h2{
+    font-size: 23px;
+  }
+img{
+  float: right;
+}

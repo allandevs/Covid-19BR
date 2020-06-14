@@ -1,0 +1,28 @@
+
+
+
+<ion-content class="ion-padding" class="background" >
+  <h1 class="ion-text-center"><ion-img src="assets/img/covid-logo.png"></ion-img></h1>
+
+      <div class="inicio">
+    <form>
+      <ion-item class="efeito">
+        <ion-icon name="mail-outline" color="dark" slot="start"></ion-icon>
+        <ion-input placeholder="E-mail" name="login" type="text" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item class="efeito">
+        <ion-icon name="lock-closed-outline" color="dark" slot="start"></ion-icon>
+        <ion-input  id="senha" placeholder="Password" name="senha" type="password" [(ngModel)]="senha"></ion-input>
+      </ion-item>
+          <ion-button class="btn-margin" size="large" shape="round" color="light" type="submit" (click)="acesso()" expand="block">Entrar</ion-button>
+    </form>
+    
+    <ion-button class="btn-margin" (click)= "cadastrar()"color="light" fill="clear" expand="block" >Criar conta</ion-button>
+  </div>
+
+  </ion-content>
+
+
+   
+
+    

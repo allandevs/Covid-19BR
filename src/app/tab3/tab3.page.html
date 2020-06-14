@@ -1,17 +1,55 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="ion-padding">
+  <ion-refresher slot="fixed" (ionRefresh)="efeitoRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+    <h1> Situação</h1>
+    <h2>Pandemia Covid-19</h2>
+    
+     <ion-card>
+      
+      <div class="fundo">
+      <ion-card-header>
+        
+           TOTAL <img src="assets/img/bandeirabrasil.png">
+        
+        <!-- <ion-card-subtitle>Total:</ion-card-subtitle> -->
+        <ion-card-title color="success">Brasil</ion-card-title>
+      </ion-card-header>
+    </div>
+      <ion-card-content>
+    <ion-label  color="dark" > <strong>Casos confirmados:</strong> <h2>{{lista_covidBrasil.confirmed}}</h2> </ion-label>
+    <br>
+    <ion-label color="dark" > <strong>Em acompanhamento :</strong> <h2>{{lista_covidBrasil.cases}}</h2> </ion-label>
+    <br>
+    <ion-label color="danger"> <strong>Mortes:</strong>  <h2>{{lista_covidBrasil.deaths}}</h2> </ion-label>
+      </ion-card-content>
+    
+    </ion-card>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
-</ion-content>
+    <ion-searchbar placeholder="Pesquise pelo Estado"
+    (ionChange)="buscar($event)"
+    (ionBlur) ="atualiza($event)"
+    (ionInput)= "atualiza2($event)"
+    clearInput
+     ></ion-searchbar>
+  
+    <ion-card *ngFor="let covid of lista_covid" class="espaco" >
+      
+      <div class="fundo">
+      <ion-card-header>
+        <ion-card-subtitle>{{covid.state}}</ion-card-subtitle>
+        <ion-card-title color="primary">{{covid.uf}}</ion-card-title>
+      </ion-card-header>
+    </div>
+      <ion-card-content>
+    <ion-label  color="dark" > <strong>Casos:</strong>  {{covid.cases.toLocaleString()}} </ion-label>
+    <br>
+    <ion-label color="dark"> <strong>Suspeitos:</strong> {{covid.suspects.toLocaleString()}} </ion-label>
+    <br>
+    <ion-label color="danger"> <strong>Mortes:</strong>  {{covid.deaths.toLocaleString()}} </ion-label>
+      </ion-card-content>
+    </ion-card>
+   
+  </ion-content>
+  
+  

@@ -1,17 +1,108 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <h1>COVID-19</h1>
+    <ion-buttons slot="start">
+      <ion-menu-toggle>
+        <ion-button>
+          <ion-icon slot="icon-only" name="menu-outline" ></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+<ion-content class="ion-padding" class="background" id="menu-content" id="menu-content" >
+  <div class="borda">
+  <ion-grid>
+    <div class="ion-text-center">
+      <!-- <h1>Covid-19</h1> -->
+      <h3 class="ion-text-center">Todos contra coronavírus!</h3>
+     
+    </div>
+    <ion-row>
+      <ion-col size="6" >
+  
+        <div class="card">
+           <a (click)="Sobre()">
+          <div class="card-body">
+            <ion-img src="assets/img/covid-info.png"></ion-img>
+            <h4 class="card-title">
+              Saiba mais</h4>
+          </div>
+        </a>
+        </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+        <div class="card">
+          <a (click)="Sintomas()">
+          <div class="card-body">
+            <ion-img src="assets/img/covid-info.png"></ion-img>
+            <h4 class="card-title">
+              Sintomas</h4>
+          </div>
+          </a>
+        </div>
+      </ion-col>
+      <ion-col size="6" >
+        
+        <div class="card">
+          <a (click)="Transmissao()">
+          <div class="card-body">
+            <ion-img src="assets/img/covid-info.png"></ion-img>
+            <h4 class="card-title">
+              Transmissão</h4>
+          </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a (click)="Prevencao()">
+          <div class="card-body">
+            <ion-img src="assets/img/covid-info.png"></ion-img>
+            <h4 class="card-title">
+              Prevenção</h4>
+          </div>
+          </a>
+        </div>
+      </ion-col>
+    </ion-row>
+    <p class="ion-text-center">Uma doença infecciosa causada por um vírus recém-descoberto.</p>
+    
+  </ion-grid>   
+</div>
+
+</ion-content>
+<ion-menu  contentId="menu-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-content>
+    <ion-list>
+     <ion-menu-toggle autoHide="false">
+      <ion-item 
+      button
+       *ngFor="let page of pages" 
+      [routerLink]="page.url"
+      [routerDirection]="page.direction">
+      <ion-icon slot="start" color="primary" [name]="page.icon">
+      </ion-icon>
+      <ion-label>{{page.text}}</ion-label>
+    </ion-item>
+    <ion-item (click)="presentAlert()" >
+    <ion-icon slot="start"  name="information-circle-outline" color="primary"></ion-icon>
+    <ion-label>Sobre</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-content>
+        <ion-fab slot="start" slot="fixed">
+          <ion-fab-button size="small" color="primary" (click)="sair()">
+            <ion-icon name="exit"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+      </ion-content>
+    </ion-item>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+     </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
