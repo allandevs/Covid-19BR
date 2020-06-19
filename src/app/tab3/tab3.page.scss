@@ -1,5 +1,16 @@
 
+@font-face{
 
+  font-family: "personalizada";
+  src: url("/assets/font/YellowRabbit-PersonalUse.woff");
+
+}
+
+ion-toolbar ion-title{
+  margin-left: 20px;
+  // font-family:"personalizada";
+  font-size:25px;
+}
 
 ion-card{
     border-radius: 20px;
@@ -31,7 +42,11 @@ ion-card{
   }
   
   h2{
+    margin-left: 5px;
     font-size: 23px;
+  }
+  h1{
+    margin-left: 5px ;
   }
 img{
   float: right;

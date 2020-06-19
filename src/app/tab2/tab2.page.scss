@@ -1,8 +1,22 @@
 .info{
-    box-shadow: 1px 1px 4px #0077DD;
+    box-shadow: 1px 1px 4px #000;
     border-radius: 10px;
     margin: 0 auto;
     margin-top: 120px;
     padding: 10px;
    
 }
+
+
+@font-face{
+
+    font-family: "personalizada";
+    src: url("/assets/font/YellowRabbit-PersonalUse.woff");
+  
+  }
+  
+  ion-toolbar ion-title{
+    margin-left: 25px;
+    // font-family:"personalizada";
+    font-size:25px;
+  }

@@ -17,6 +17,19 @@ export class Tab3Page {
   public lista_covid = new Array<any>();
   public lista_covidBrasil = new Array<any>();
 
+  public title: string ="";
+  pages3: {url:string; direction: string; icon:string; text: string}[];
+
+   initializeApp() {
+    
+      this.pages3= [
+        { url: '../../../tab1', direction:'back', icon:'home', text:'Inicio'},
+        { url: '../../../tab3', direction:'forward', icon:'analytics-outline', text:'Situação'},
+        { url: '', direction:'forward', icon:'close-circle-outline', text:'Sair da conta'}
+        
+      ];
+      
+    }
    buscar(ev: any){
     
     const val = ev.target.value;
